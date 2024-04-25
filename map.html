@@ -1,0 +1,34 @@
+<html>
+    <head>
+        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.map.ir/web-sdk/1.4.2/css/mapp.min.css">
+        <link rel="stylesheet" href="https://cdn.map.ir/web-sdk/1.4.2/css/fa/style.css">
+    </head>
+
+    <body>
+        <div id="app"></div>
+
+<script type="text/javascript" src="https://cdn.map.ir/web-sdk/1.4.2/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.map.ir/web-sdk/1.4.2/js/mapp.env.js"></script>
+<script type="text/javascript" src="https://cdn.map.ir/web-sdk/1.4.2/js/mapp.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+  var app = new Mapp({
+      element: '#app',
+      presets: {
+          latlng: {
+              lat: 35.700145,
+              lng: 51.337115,
+          },
+          zoom: 18,
+      },
+      apiKey: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjljYTllZGQ1MWRlZGE0MmEwYmEyYTBiNzI5N2I4NDJkY2VmZGUzM2YyYjg3ZWI2ZDAyYjNiOTlhMzAxMGMxNjY1YTlhN2NlM2E5YzBlMjk1In0.eyJhdWQiOiIyMzU5NCIsImp0aSI6IjljYTllZGQ1MWRlZGE0MmEwYmEyYTBiNzI5N2I4NDJkY2VmZGUzM2YyYjg3ZWI2ZDAyYjNiOTlhMzAxMGMxNjY1YTlhN2NlM2E5YzBlMjk1IiwiaWF0IjoxNjkxNzQwNDIxLCJuYmYiOjE2OTE3NDA0MjEsImV4cCI6MTY5NDMzMjQyMSwic3ViIjoiIiwic2NvcGVzIjpbImJhc2ljIl19.XBtWdCxfLz3v-wYaz6V4LKRK0xt8-Z0qHfNzlaOovuj9STA0HbYFBmmtpyyeDQT4F6UZnmCB30Yfe725aiG_GK0gy7dudidFv4IqViTrx1swB6OmxrsIHQHqggenelqivcBJObfBQcjT02hYkRkNrimyRS8lV8p8pFR_XCqRqAVtchCZZLrJjI5_9DyRlAFLha2ov1BQZPZgNduPSYMAMKDAIwoRrzbUzCkVb955fvJJ52mwJG8tQxp1xT0IX1t1GHNpL6MKXHHytvgAPOQTisw8_q8pMPj-rqNhOmfbgO_x-k5-jbrtkOn1AJIIdYnBKGwr5TW_RnmyTskz2Yfi9g'
+  });
+app.addLayers();
+});
+</script>
+    </body>
+</html>

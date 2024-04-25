@@ -1,0 +1,59 @@
+<html>
+  <body>
+
+    <div id="map" style="  width: 100%;height: 100%; ">
+            
+    </div>
+
+    <script>
+
+
+      function myMap() {
+        var myCenter = new google.maps.LatLng(35.700145, 51.337115);
+        
+        
+            
+          var mapCanvas = document.getElementById("map");
+
+          var mapOptions = {
+            center: myCenter, 
+            zoom: 15,
+            // mapTypeId: google.maps.MapTypeId.HYBRID
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+          
+          
+        
+        var map = new google.maps.Map(mapCanvas, mapOptions); 
+
+
+        google.maps.event.addListener(map,'click',function() {click1();});
+        
+        
+        var p1 = new google.maps.LatLng(35.800145, 51.437115);
+        var marker = new google.maps.Marker({position: p1,  icon: { url: "1.png", scaledSize: new google.maps.Siz(50, 50), 
+        origin: new google.maps.Point(0,0), 
+        anchor: new google.maps.Point(50, 50)}  });
+      
+        marker.setMap(map);
+
+        
+        var infoWindow = new google.maps.InfoWindow();
+
+        google.maps.event.addListener(marker, 'click', function () {
+            var markerContent = '<button> click </button> Majid Tejenjari <br><br> توضیحات دلخواه';
+            infoWindow.setContent(markerContent);
+            infoWindow.open(map, this);
+        });
+      }
+
+
+
+      function click1(){
+
+      }
+    </script> 
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1r0WGwV_MRE_l1hCBvxGhBg5C0fVmgzQ&callback=myMap"></script>
+  </body>
+</html>
